@@ -61,7 +61,7 @@ object TahasTestsProject_VersionedSettings_Test : BuildType({
         step {
             id = "SignPathRunner_2"
             type = "SignPathRunner"
-            param("inputArtifactPath", "C:\vfcompat.dll")
+            param("inputArtifactPath", "vfcompat.dll")
             param("artifactConfigurationSlug", "initial")
             param("organizationId", "e7509335-e491-4309-8e45-af0d7c1a8db6")
             param("apiToken", "credentialsJSON:8d2abf33-2c18-49a8-94e2-10fd378478e7")

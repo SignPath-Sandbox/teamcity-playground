@@ -26,7 +26,7 @@ object Test : BuildType({
         }
 
         step {
-            val artifact = "BuildOutput/HelloWorld.exe"
+            val artifact = "BuildOutput/HelloWorld"
 
             id = "SignPathRunner_2"
             type = "SignPathRunner"

@@ -11,11 +11,7 @@ object TahasTestsProject_VersionedSettings_Test : BuildType({
     id("Test")
     name = "test"
 
-    artifactRules = "signed.dll"
-
-    params {
-
-    }
+    artifactRules = "BuildOutput"
 
     vcs {
         root(DslContext.settingsRoot)
@@ -23,14 +19,10 @@ object TahasTestsProject_VersionedSettings_Test : BuildType({
 
     steps {
         powerShell {
-            name = "Copy Artifact (DEBUG)"
-            id = "Copy_Artifact_DEBUG"
+            name = "Build Project"
+            id = "Build_Project"
             scriptMode = script {
-                content = """
-                    Copy-Item "C:\vfcompat.dll" .
-                    "Hello world" | Out-File "test.txt"
-                    ls
-                """.trimIndent()
+                content = "Build.ps1"
             }
         }
 

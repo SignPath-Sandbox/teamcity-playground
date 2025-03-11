@@ -21,7 +21,7 @@ object Test : BuildType({
         script {
             name = "Build Project"
             id = "Build_Project"
-            scriptContent = "build.sh"
+            scriptContent = "./build.sh"
             formatStderrAsError = true
         }
 

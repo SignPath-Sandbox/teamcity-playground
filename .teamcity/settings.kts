@@ -1,13 +1,13 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.powerShell
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 version = "2024.03"
 
 project {
-    buildType(TahasTestsProject_VersionedSettings_Test)
+    buildType(Test)
 }
 
-object TahasTestsProject_VersionedSettings_Test : BuildType({
+object Test : BuildType({
     id("Test")
     name = "test"
 
@@ -18,26 +18,29 @@ object TahasTestsProject_VersionedSettings_Test : BuildType({
     }
 
     steps {
-        powerShell {
+        script {
             name = "Build Project"
             id = "Build_Project"
-            scriptMode = script {
-                content = "Build.ps1"
-            }
+            scriptContent = "build.sh"
+            formatStderrAsError = true
         }
 
         step {
+            val artifact = "BuildOutput/HelloWorld.exe"
+
             id = "SignPathRunner_2"
             type = "SignPathRunner"
-            param("inputArtifactPath", "vfcompat.dll")
+            param("inputArtifactPath", artifact)
+            param("outputArtifactPath", artifact)
+
             param("artifactConfigurationSlug", "initial")
-            param("organizationId", "e7509335-e491-4309-8e45-af0d7c1a8db6")
+            param("organizationId", "7cf15ea1-dc50-4d3d-b0c1-e88a5a7d951c")
             param("apiToken", "credentialsJSON:8d2abf33-2c18-49a8-94e2-10fd378478e7")
-            param("outputArtifactPath", "signed.dll")
+
             param("waitForCompletion", "true")
-            param("connectorUrl", "https://teamcity-dev6.connectors.dev.signpath.io:15201")
+            param("connectorUrl", "https://teamcity-connector-playground.customersimulation.int.signpath.io")
             param("signingPolicySlug", "test-signing")
-            param("projectSlug", "project")
+            param("projectSlug", "Project")
         }
     }
 })

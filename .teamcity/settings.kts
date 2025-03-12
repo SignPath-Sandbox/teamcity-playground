@@ -26,7 +26,7 @@ object Test : BuildType({
         }
 
         step {
-            val artifact = "BuildOutput/HelloWorld"
+            val artifact = "BuildOutput.zip"
 
             id = "SignPathRunner_2"
             type = "SignPathRunner"

@@ -11,7 +11,7 @@ object Test : BuildType({
     id("Test")
     name = "test"
 
-    artifactRules = "BuildOutput"
+    artifactRules = "BuildOutput.zip"
 
     vcs {
         root(DslContext.settingsRoot)

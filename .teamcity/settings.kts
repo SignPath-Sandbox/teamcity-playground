@@ -35,7 +35,7 @@ object Test : BuildType({
 
             param("artifactConfigurationSlug", "initial")
             param("organizationId", "d0bc0910-ab91-4b74-bcdd-52d983196a4d")
-            param("apiToken", "credentialsJSON:24fb3992-424d-4a9d-ab99-068eccb8e3fe")
+            param("apiToken", "credentialsJSON:795ac364-d1c2-46f6-9bc4-d9967e28ef8b")
 
             param("waitForCompletion", "true")
             param("connectorUrl", "https://teamcity-connector-playground.customersimulation.int.signpath.io")

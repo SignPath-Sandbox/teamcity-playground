@@ -6,6 +6,6 @@ package=BuildOutput.zip
 rm $buildOutputDirectory -R -f
 rm $package -f
 
-dotnet publish "HelloWorld" -o $buildOutputDirectory --self-contained
+dotnet publish "src" -o $buildOutputDirectory --self-contained
 
 zip -r $package $buildOutputDirectory

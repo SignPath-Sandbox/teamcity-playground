@@ -40,7 +40,7 @@ object Test : BuildType({
             param("waitForCompletion", "true")
             param("connectorUrl", "https://teamcity-connector-playground.customersimulation.int.signpath.io")
             param("signingPolicySlug", "test-signing")
-            param("projectSlug", "Project")
+            param("projectSlug", "TeamCityConnector")
         }
     }
 })

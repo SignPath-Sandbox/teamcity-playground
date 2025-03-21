@@ -33,7 +33,7 @@ object Test : BuildType({
             param("inputArtifactPath", artifact)
             param("outputArtifactPath", artifact)
 
-            param("artifactConfigurationSlug", "initial")
+            //param("artifactConfigurationSlug", "initial")
             param("organizationId", "d0bc0910-ab91-4b74-bcdd-52d983196a4d")
             param("apiToken", "credentialsJSON:795ac364-d1c2-46f6-9bc4-d9967e28ef8b")
 

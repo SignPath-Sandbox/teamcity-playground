@@ -7,7 +7,6 @@
     <kotlin.version>1.9.24</kotlin.version>
   </properties>
 
-
   <groupId>TahasTestsProject_VersionedSettings</groupId>
   <artifactId>TahasTestsProject_VersionedSettings_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
@@ -28,7 +27,7 @@
     </repository>
     <repository>
       <id>teamcity-server</id>
-      <url>http://localhost:8111/app/dsl-plugins-repository</url>
+      <url>https://teamcity-playground.customersimulation.int.signpath.io/app/dsl-plugins-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -40,6 +39,15 @@
       <id>JetBrains</id>
       <url>https://download.jetbrains.com/teamcity-repository</url>
     </pluginRepository>
+
+    <pluginRepository>
+      <id>teamcity-server</id>
+      <url>https://teamcity-playground.customersimulation.int.signpath.io/app/dsl-plugins-repository</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+
   </pluginRepositories>
 
   <build>

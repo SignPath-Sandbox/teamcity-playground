@@ -1,6 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
-import jetbrains.buildServer.configs.kotlin.buildSteps.signpath
+import jetbrains.buildServer.configs.kotlin.buildSteps.signPathSubmitSigningRequest
 
 version = "2024.03"
 
@@ -27,7 +27,7 @@ object Test : BuildType({
         }
 
         // https://teamcity-playground.customersimulation.int.signpath.io/app/dsl-documentation/buildSteps/signpath-step/index.html
-         signpath {
+        signPathSubmitSigningRequest {
              val artifact = "BuildOutput.zip"
              name = "Sign Package"
 

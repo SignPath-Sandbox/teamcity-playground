@@ -41,7 +41,7 @@ object Test : BuildType({
              connectorUrl = "https://teamcity-connector-playground.customersimulation.int.signpath.io"
              signingPolicySlug = "test-signing"
              projectSlug = "TeamCityConnector"
-            userDefinedParamters = """
+            userDefinedParameters = """
                 
                 
                 fileName: fromUserDefinedParams.sig

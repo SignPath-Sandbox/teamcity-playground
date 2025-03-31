@@ -33,7 +33,7 @@ object Test : BuildType({
 
              inputArtifactPath = artifact
              outputArtifactPath = artifact
-             artifactConfigurationSlug = "initial"
+             artifactConfigurationSlug = "With_User_Defined_Parameters"
              organizationId = "d0bc0910-ab91-4b74-bcdd-52d983196a4d"
              apiToken = "credentialsJSON:795ac364-d1c2-46f6-9bc4-d9967e28ef8b"
 
@@ -41,6 +41,14 @@ object Test : BuildType({
              connectorUrl = "https://teamcity-connector-playground.customersimulation.int.signpath.io"
              signingPolicySlug = "test-signing"
              projectSlug = "TeamCityConnector"
+            userDefinedParamters = """
+                
+                
+                fileName: fromUserDefinedParams.sig
+                
+                
+            """.trimIndent()
+
          }
 
 //        step {

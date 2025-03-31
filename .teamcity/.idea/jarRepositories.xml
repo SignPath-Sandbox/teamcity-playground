@@ -2,11 +2,6 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
-      <option name="id" value="teamcity-server" />
-      <option name="name" value="teamcity-server" />
-      <option name="url" value="https://teamcity-playground.customersimulation.int.signpath.io/app/dsl-plugins-repository" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
@@ -30,6 +25,11 @@
       <option name="id" value="teamcity-server" />
       <option name="name" value="teamcity-server" />
       <option name="url" value="http://localhost:8111/app/dsl-plugins-repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="teamcity-server" />
+      <option name="name" value="teamcity-server" />
+      <option name="url" value="https://teamcity-stable.customersimulation.int.signpath.io/app/dsl-plugins-repository" />
     </remote-repository>
   </component>
 </project>

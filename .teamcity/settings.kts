@@ -46,7 +46,6 @@ object Test : BuildType({
                 
                 fileName: fromUserDefinedParams.sig
                 
-                
             """.trimIndent()
 
          }

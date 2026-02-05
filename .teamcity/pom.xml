@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>TahasTestsProject_VersionedSettings Config DSL Script</name>
-
-  <properties>
-    <kotlin.version>1.9.24</kotlin.version>
-  </properties>
-
-  <groupId>TahasTestsProject_VersionedSettings</groupId>
-  <artifactId>TahasTestsProject_VersionedSettings_dsl</artifactId>
+  <name>Test Config DSL Script</name>
+  <groupId>Test</groupId>
+  <artifactId>Test_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>
@@ -39,38 +34,28 @@
       <id>JetBrains</id>
       <url>https://download.jetbrains.com/teamcity-repository</url>
     </pluginRepository>
-
-    <pluginRepository>
-      <id>teamcity-server</id>
-      <url>https://teamcity-playground.customersimulation.int.signpath.io/app/dsl-plugins-repository</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
   </pluginRepositories>
 
   <build>
-    <sourceDirectory></sourceDirectory>
+    <sourceDirectory>${basedir}</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>kotlin-maven-plugin</artifactId>
         <groupId>org.jetbrains.kotlin</groupId>
         <version>${kotlin.version}</version>
 
-        <configuration>
-          <jvmTarget>1.8</jvmTarget>
-        </configuration>
+        <configuration/>
         <executions>
           <execution>
             <id>compile</id>
-            <phase>compile</phase>
+            <phase>process-sources</phase>
             <goals>
               <goal>compile</goal>
             </goals>
           </execution>
           <execution>
             <id>test-compile</id>
-            <phase>test-compile</phase>
+            <phase>process-test-sources</phase>
             <goals>
               <goal>test-compile</goal>
             </goals>
@@ -114,17 +99,6 @@
       <artifactId>kotlin-script-runtime</artifactId>
       <version>${kotlin.version}</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-stdlib-jdk8</artifactId>
-      <version>${kotlin.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-test</artifactId>
-      <version>${kotlin.version}</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>

@@ -66,7 +66,7 @@ object BuildAndSign : BuildType({
         }
         signPathSubmitSigningRequest {
             id = "SignPathRunner_2"
-            connectorUrl = "https://teamcity-connector-playground.customersimulation.int.signpath.io/"
+            connectorUrl = "https://pipeline-connector-playground.customersimulation.int.signpath.io/TeamCity/TeamCityServer"
             apiToken = "credentialsJSON:795ac364-d1c2-46f6-9bc4-d9967e28ef8b"
             organizationId = "%SignPath.OrganizationID%"
             projectSlug = "TeamCityConnector"

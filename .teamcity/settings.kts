@@ -107,7 +107,7 @@ object SignScript : BuildType({
             projectSlug = "Stefans_Teamcity_Project"
             signingPolicySlug = "test-signing"
             artifactConfigurationSlug = "initial"
-            inputArtifactPath = "script.ps1"
+        inputArtifactPath = "../script.ps1"
             outputArtifactPath = "script.signed.ps1"
             parameters = ""
             waitForCompletion = true
